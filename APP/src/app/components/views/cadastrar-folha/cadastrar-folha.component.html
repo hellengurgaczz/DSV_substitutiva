@@ -1,18 +1,29 @@
-<h3>Cadastro de farmácia</h3>
-<div id="nomeFarmacia">
-    <label for="nomeFarmacia">Nome da farmácia: </label>
-    <input type="text" name="nomeFarmacia" [(ngModel)]="nomeFarmacia">
+<h3>Cadastro de folha de pagamento</h3>
+<div id="mes">
+    <label for="mes">Mês: </label>
+    <input type="text" name="mes" [(ngModel)]="mes">
 </div>
 
-<div id="enderecoFarmacia">
-    <label for="enderecoFarmacia">Endereço: </label>
-    <input type="text" name="enderecoFarmacia" [(ngModel)]="enderecoFarmacia">
+<div id="ano">
+    <label for="ano">Ano: </label>
+    <input type="text" name="ano" [(ngModel)]="ano">
 </div>
 
-<div id="telefoneFarmacia">
-    <label for="telefoneFarmacia">Telefone: </label>
-    <input type="text" name="telefoneFarmacia" [(ngModel)]="telefoneFarmacia">
+<div id="horas">
+    <label for="horas">Horas: </label>
+    <input type="text" name="horas" [(ngModel)]="horas">
+</div>
+
+<div id="valorHora">
+    <label for="valorHora">Valor da hora trabalhada: </label>
+    <input type="text" name="valorHora" [(ngModel)]="valorHora">
+</div>
+
+<div id="funcionarioId">
+    <label for="funcionarioId">ID do funcionário: </label>
+    <input type="text" name="funcionarioId" [(ngModel)]="funcionarioId">
 </div>
 
 
-<button (click)="cadastrarFarmacia()">Cadastrar minha farmácia</button>
+
+<button (click)="cadastrarFolha()">Cadastrar folha de pagamento</button>

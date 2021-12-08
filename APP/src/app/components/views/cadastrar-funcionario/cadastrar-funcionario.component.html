@@ -1,0 +1,18 @@
+<h3>Cadastro de funcionario</h3>
+<div id="nome">
+    <label for="nome">Nome do funcionario: </label>
+    <input type="text" name="nome" [(ngModel)]="nome">
+</div>
+
+<div id="cargo">
+    <label for="cargo">Cargo: </label>
+    <input type="text" name="cargo" [(ngModel)]="cargo">
+</div>
+
+<div id="salario">
+    <label for="salario">Salário: </label>
+    <input type="text" name="salario" [(ngModel)]="salario">
+</div>
+
+
+<button (click)="cadastrarFuncionario()">Cadastrar funcionario</button>

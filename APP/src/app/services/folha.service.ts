@@ -7,7 +7,8 @@ import { Folha } from '../Models/folha';
 @Injectable({
   providedIn: 'root'
 })
-export class FarmaciaService {
+
+export class FolhaService {
   
   private baseUrl = "https://localhost:5001/api/folha"
 

@@ -1,6 +1,8 @@
-import { FarmaciaService } from '../../../services/folha.service';
+import { FuncionarioService } from './../../../services/funcionario.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
+import { Folha } from 'src/app/Models/folha';
+import { FolhaService } from '../../../services/folha.service'
 
 
 @Component({
@@ -10,31 +12,30 @@ import { Router } from '@angular/router'
 
 })
 
-
 export class CadastrarFolhaComponent implements OnInit {
 
-    nomeFarmacia!: string;
-    enderecoFarmacia!:string;
-    telefoneFarmacia!: number;
+    mes!: number;
+    ano!:number;
+    horas!: number;
+    valorHora!: number;
+    funcionarioId!: number;
     
-    constructor(private router: Router, private service: FarmaciaService){
+    constructor(private router: Router, private folhaService: FolhaService, private funcionarioService: FuncionarioService){}
 
-    }
     ngOnInit(){} 
 
-
-    cadastrarFarmacia(): void {
-        let farmacia: Farmacia = {
-            nomeFarmacia: this.nomeFarmacia,
-            enderecoFarmacia: this.enderecoFarmacia,
-            telefoneFarmacia: this.telefoneFarmacia
+    cadastrarFolha(): void {
+        let folha: Folha = {
+            mes: this.mes,
+            ano: this.ano,
+            horas: this.horas,
+            valorHora: this.valorHora,
+            funcionarioId: this.funcionarioId
         }
 
-        this.service.create(farmacia).subscribe(farmacia => {
-            console.log('Deu certo o cadastro da farmacia!')
-            this.router.navigate(["../../produto/listar"])
-        }, (error) => {
-            console.log(error)
+        this.folhaService.create(folha).subscribe(folha => {
+            console.log(folha)
+            this.router.navigate(["../../folha/listar"])
         })
     }
 }
