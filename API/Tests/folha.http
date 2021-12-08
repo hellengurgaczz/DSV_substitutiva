@@ -5,9 +5,9 @@ Content-Type: application/json
 {
     "Id": 1,
     "Mes" : 1,
-    "Ano": 2021
+    "Ano": 2021,
     "Horas": 40,
-    "ValorHora": 25
+    "ValorHora": 25,
     "FuncionarioId": 1
 }
 

@@ -34,9 +34,9 @@ namespace API.Controllers
         //GET: api/produto/buscarFuncionario/{id}
         [HttpGet]
         [Route("buscarFuncionario/{id}")]
-        public IActionResult getByName([FromRoute] id id)
+        public IActionResult getByName([FromRoute] int id)
         {
-           Funcionario funcionario = _context.Funcionarios.Find(id);
+            Funcionario funcionario = _context.Funcionarios.Find(id);
             if (funcionario == null)
             {
                 return NotFound();

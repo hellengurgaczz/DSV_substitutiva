@@ -1,0 +1,18 @@
+<h3>Cadastro de farmácia</h3>
+<div id="nomeFarmacia">
+    <label for="nomeFarmacia">Nome da farmácia: </label>
+    <input type="text" name="nomeFarmacia" [(ngModel)]="nomeFarmacia">
+</div>
+
+<div id="enderecoFarmacia">
+    <label for="enderecoFarmacia">Endereço: </label>
+    <input type="text" name="enderecoFarmacia" [(ngModel)]="enderecoFarmacia">
+</div>
+
+<div id="telefoneFarmacia">
+    <label for="telefoneFarmacia">Telefone: </label>
+    <input type="text" name="telefoneFarmacia" [(ngModel)]="telefoneFarmacia">
+</div>
+
+
+<button (click)="cadastrarFarmacia()">Cadastrar minha farmácia</button>

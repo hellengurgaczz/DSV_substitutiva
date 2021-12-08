@@ -2,6 +2,7 @@ using System.Linq;
 using API.Data;
 using API.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
@@ -41,11 +42,11 @@ namespace API.Controllers
             (
                 folha => folha.Id == id
             );
-            if (id == null)
+            if (id == 0)
             {
                 return NotFound();
             }
-            _context.Folhas.Remove(Folha);
+            _context.Folhas.Remove(folha);
             _context.SaveChanges();
             return Ok(_context.Folhas.ToList());
         }
