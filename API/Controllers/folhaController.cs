@@ -28,9 +28,10 @@ namespace API.Controllers
         //GET: api/folha/listar
         [HttpGet]
         [Route("listar")]
-        public IActionResult List() => Ok(_context.Folhas
-        .Include(folha => folha.Funcionario)
-        .ToList());
+        public IActionResult List() =>
+            Ok(_context.Folhas
+                .Include(Funcionario => Funcionario.Funcionario)
+                .ToList());
 
 
         //DELETE: api/folha/deletar
