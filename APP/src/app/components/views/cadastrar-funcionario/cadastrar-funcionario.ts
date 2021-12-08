@@ -3,7 +3,6 @@ import { Router } from '@angular/router'
 import { Funcionario } from 'src/app/Models/funcionario';
 import { FuncionarioService } from "../../../services/funcionario.service"
 
-
 @Component({
     selector: 'app-cadastrar-funcionario',
     templateUrl: './cadastrar-funcionario.component.html',
