@@ -1,0 +1,21 @@
+### Cadastrar funcionario
+POST https://localhost:5001/api/funcionario/cadastrar
+Content-Type: application/json
+
+{
+    "Id": 1,
+    "Nome": "hellen",
+    "Cargo": "CEO",
+    "Salario": 10.000
+}
+
+### Listar funcionarios
+GET https://localhost:5001/api/funcionario/listar
+Content-Type: application/json
+
+### Buscar funcionario por id
+GET https://localhost:5001/api/funcionario/buscarFuncionario/1
+Content-Type: application/json
+
+### Deletar funcionario pelo id
+DELETE https://localhost:5001/api/funcionario/deletar/1
